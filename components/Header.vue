@@ -7,10 +7,18 @@
 			<div class="header-middle">
 				<nav role="navigation">
 					<ul class="header-nav">
-						<li class="header-nav-item active" @click="isActive"><a href="/">Home</a></li>
-						<li class="header-nav-item"><a href="/about">About</a></li>
-						<li class="header-nav-item"><a href="/work">Work</a></li>
-						<li class="header-nav-item"><a href="/contact">Contact</a></li>
+						<li class="header-nav-item" :class="{'active': isActive === '1'}" @click="isSelect('1')">
+							<Nuxt-Link to="/">Home</Nuxt-Link>
+						</li>
+						<li class="header-nav-item" :class="{'active': isActive === '2'}" @click="isSelect('2')">
+							<Nuxt-Link to="/about">About</Nuxt-Link>
+						</li>
+						<li class="header-nav-item" :class="{'active': isActive === '3'}" @click="isSelect('3')">
+							<Nuxt-Link to="/work">Work</Nuxt-Link>
+						</li>
+						<li class="header-nav-item" :class="{'active': isActive === '4'}" @click="isSelect('4')">
+							<Nuxt-Link to="/contact">Contact</Nuxt-Link>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -20,15 +28,30 @@
 </template>
 
 <script>
-// $("#header-nav").on('click', 'li', function(){
-// 	$("header-nav li.active").removeClass("bar")
-// 	$(this).addClas("bar")
-// });
+export default {
+	el: '#navigation',
+	data () {
+		return {
+			tabs: [
+				{ title: 'Home', value: '1' },
+				{ title: 'About', value: '2'},
+				{ title: 'Work', value: '3' },
+				{ title: 'Contact', value: '4'}
+			],
+			currentTab: '1'
+		}
+	},
+	methods: {
+		handleClick (newTab) {
+			this.currentTab = newTab
+		}
+	}
+}
 </script>
 
 <style>
 html {
-	widows: 100%;
+	width: 100vw;
 	height: 100vh;
 	font-size: 62.5%;
 }
@@ -36,22 +59,24 @@ html {
 	position: relative;
 	background: #fff;
 	border-bottom: solid 1px rgb(97, 97, 97);
+	width: 100%;
 	height: 90px;
 }
 .header-wrapper {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	height: 90px;
 }
 .header-start {
-	width: 240px;
+	width: 240rem;
 }
 .header-end {
-	width: 240px;
+	width: 240rem;
 }
 .header-logo {
 	font-family: 'Bradley Hand', sans-serif;
-	font-size: 2.8rem;
+	font-size: 3.2rem;
 	font-weight: bold;
 	color: #333;
 	padding-left: 48px
@@ -62,14 +87,34 @@ html {
 	text-align: center;
 }
 .header-nav-item {
-	font-family: 'Bradley Hand', sans-serif;
-	font-size: 2.0rem;
-	font-weight: bold;
 	width: 100px;
-	height: 90px;
-	line-height: 90px;
+	font-family: 'Bradley Hand', sans-serif;
+	font-size: 2.2rem;
+	font-weight: bold;
 }
-.header-nav-item:active {
-	color: #08A;
+.header-nav-item a {
+	display: inline-block;
+  position: relative;
+}
+.header-nav-item a:hover {
+	color: #08a;
+	transition: 300ms;
+}
+.header-nav-item a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #08a;
+  opacity: 1;
+	transform: scale(0);
+	transform-origin: center;
+  transition: opacity 300ms, transform 300ms;
+}
+.header-nav-item a:hover::after,
+.header-nav-item a:focus::after {
+	transform: scale(1);
 }
 </style>

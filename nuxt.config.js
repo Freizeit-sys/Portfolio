@@ -5,7 +5,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Yuki\'s Portfolio Website',
-    titleTemplate: ' | Yuki\'s Portfolio Website',
+    titleTemplate: '%s | Yuki\'s Portfolio Website',
     htmlAttrs: {
       lang: 'ja'
     },
@@ -25,7 +25,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/element-ui'
+    
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

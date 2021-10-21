@@ -1,19 +1,18 @@
 <template>
-	<div>
-		<h1>About</h1>
+		<div>
+		<h1>Contact</h1>
 	</div>
 </template>
 
 <script>
 export default {
 	layout() {
-		return 'about'
+		return 'contact'
 	},
 	head() {
 		return {
-			title: 'About',
+			title: 'Contact'
 		}
 	}
 }
 </script>
-
