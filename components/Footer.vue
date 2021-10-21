@@ -24,6 +24,7 @@ hr {
 .footer-wrapper {
 	width: 320px;
 	margin: auto;
+	padding: 0 20px;
 	text-align: center;
 	line-height: 28px;
 }

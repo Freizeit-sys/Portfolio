@@ -1,6 +1,8 @@
 <template>
 	<main>
-		<h1>Home</h1>
+		<div class="thumbnail">
+			<img src="/figures/home_image.jpg" alt="">
+		</div>
 	</main>
 </template>
 
@@ -17,3 +19,16 @@ export default {
 	}
 }
 </script>
+
+<style>
+.thumbnail {
+	margin: 50px 0;
+	text-align: center;
+}
+.thumbnail img {
+	margin: auto;
+	object-fit: cover;
+	width: 540px;
+	height: 540px;
+}
+</style>
