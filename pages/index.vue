@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<div class="thumbnail">
-			<img src="/figures/home_image.jpg" alt="">
+			<img src="/figures/home_image.jpg" loading="lazy" alt="">
 		</div>
 	</main>
 </template>
@@ -29,6 +29,6 @@ export default {
 	margin: auto;
 	object-fit: cover;
 	width: 540px;
-	height: 540px;
+	height: 580px;
 }
 </style>
