@@ -83,7 +83,6 @@ export default {
 	width: 900px;
 	min-height: 350px;
 	margin-top: 3%;
-	flex-basis: 90%;
 }
 .card-body {
 	font-family: sans-serif;
