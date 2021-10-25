@@ -53,7 +53,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .work {
 	position: relative;
 	margin: 8% 0 5%;

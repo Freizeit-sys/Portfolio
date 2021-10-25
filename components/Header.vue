@@ -7,16 +7,16 @@
 			<div class="header-middle">
 				<nav role="navigation">
 					<ul class="header-nav">
-						<li class="header-nav-item" :class="{'active': isActive === '1'}" @click="isSelect('1')">
+						<li class="header-nav-item">
 							<Nuxt-Link to="/">Home</Nuxt-Link>
 						</li>
-						<li class="header-nav-item" :class="{'active': isActive === '2'}" @click="isSelect('2')">
+						<li class="header-nav-item">
 							<Nuxt-Link to="/about">About</Nuxt-Link>
 						</li>
-						<li class="header-nav-item" :class="{'active': isActive === '3'}" @click="isSelect('3')">
+						<li class="header-nav-item">
 							<Nuxt-Link to="/work">Work</Nuxt-Link>
 						</li>
-						<li class="header-nav-item" :class="{'active': isActive === '4'}" @click="isSelect('4')">
+						<li class="header-nav-item">
 							<Nuxt-Link to="/contact">Contact</Nuxt-Link>
 						</li>
 					</ul>
@@ -29,7 +29,6 @@
 
 <script>
 export default {
-	el: '#navigation',
 	data () {
 		return {
 			tabs: [

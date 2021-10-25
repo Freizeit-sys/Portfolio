@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .about {
 	position: relative;
 	margin: 8% 0 5%;
