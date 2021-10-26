@@ -26,10 +26,10 @@ export default {
 	data() {
 		return {
 			form: {
-				name: "",
-				email: "",
-				message: ""
-			}
+				name: '',
+				email: '',
+				message: '',
+			},
 		}
 	},
 	head() {

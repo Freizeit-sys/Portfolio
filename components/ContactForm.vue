@@ -30,6 +30,9 @@
 				<p v-if="$v.form.email.$error && !$v.form.email.required" class="text-danger">
 					The Email filed is required
 				</p>
+				<p v-if="$v.form.email.$error && !$v.form.email.email" class="text-danger">
+					The Email address is not valid
+				</p>
 			</span>
 		</div>
 		<div class="form-group">
@@ -55,12 +58,12 @@
 				</p>
 			</span>
 		</div>
-		<button type="submit" class="btn" @click.prevent="submit">Send</button>
+		<button type="submit" class="btn" :disabled="!changed" @click.prevent="submit">Send</button>
 	</form>
 </template>
 
 <script>
-import { minLength, required } from 'vuelidate/lib/validators'
+import { email, minLength, required } from 'vuelidate/lib/validators'
 
 export default {
   props: {
@@ -71,9 +74,20 @@ export default {
   },
   data() {
     return {
+			changed: false,
       form: null
     }
   },
+	watch: {
+		form: {
+      handler() {
+        // using lodash to compare original form data and current form data
+        this.changed = !this.$v.$invalid
+      },
+      // useful to watch deeply nested properties on a data variable
+      deep: true,
+    },
+	},
   mounted() {
     this.form = { ...this.value }
   },
@@ -95,6 +109,7 @@ export default {
       },
       email: {
         required,
+				email,
       },
       message: {
         required,
