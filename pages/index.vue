@@ -1,7 +1,7 @@
 <template>
 	<div role="main">
 		<div class="container">
-			<img src="/figures/home_image.jpg" loading="lazy" alt="">
+			<img src="/figures/home_image.jpg" alt="">
 		</div>
 	</div>
 </template>

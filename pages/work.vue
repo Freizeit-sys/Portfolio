@@ -24,10 +24,14 @@ export default {
 	data() {
 		return {
 			works: [
-				{ title: 'aaa1', image: '/figures/campnou.jpg' },
-				{ title: 'aaa2', image: '/figures/campnou.jpg' },
-				{ title: 'aaa3', image: '/figures/campnou.jpg' },
-				{ title: 'aaa3', image: '/figures/campnou.jpg' },
+				{ title: 'aaa1', image: '/figures/dummy02.jpg' },
+				{ title: 'aaa2', image: '/figures/dummy02.jpg' },
+				{ title: 'aaa3', image: '/figures/dummy02.jpg' },
+				{ title: 'aaa3', image: '/figures/dummy02.jpg' },
+				{ title: 'aaa3', image: '/figures/dummy02.jpg' },
+				{ title: 'aaa3', image: '/figures/dummy02.jpg' },
+				{ title: 'aaa3', image: '/figures/dummy02.jpg' },
+				{ title: 'aaa3', image: '/figures/dummy02.jpg' },
 			]
 		}
 	},
