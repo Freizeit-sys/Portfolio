@@ -49,7 +49,7 @@ export default {
 <style scoped>
 .contact {
   position: relative;
-  margin: 8% 0 5%;
+  margin: 3% 0 5%;
   text-align: center;
 }
 .contact h1 {

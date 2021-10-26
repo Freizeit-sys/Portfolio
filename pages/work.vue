@@ -3,36 +3,12 @@
 	<section class="work">
 		<h1>Work</h1>
 		<div class="container flexbox">
-			<div class="card">
+			<div v-for="work in works" :key="work" class="card">
 				<div class="card-body">
 					<a href="#">
-						<img src="/figures/campnou.jpg" alt="" loading="lazy">
+						<img :src=work.image alt="" loading="lazy">
 					</a>
-					<h2>Title</h2>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<a href="#">
-						<img src="/figures/campnou.jpg" alt="" loading="lazy">
-					</a>
-					<h2>Title</h2>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<a href="#">
-						<img src="/figures/campnou.jpg" alt="" loading="lazy">
-					</a>
-					<h2>Title</h2>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-body">
-					<a href="#">
-						<img src="/figures/campnou.jpg" alt="" loading="lazy">
-					</a>
-					<h2>Title</h2>
+					<h2 v-text=work.title></h2>
 				</div>
 			</div>
 		</div>
@@ -45,6 +21,16 @@ export default {
 	layout() {
 		return 'work'
 	},
+	data() {
+		return {
+			works: [
+				{ title: 'aaa1', image: '/figures/campnou.jpg' },
+				{ title: 'aaa2', image: '/figures/campnou.jpg' },
+				{ title: 'aaa3', image: '/figures/campnou.jpg' },
+				{ title: 'aaa3', image: '/figures/campnou.jpg' },
+			]
+		}
+	},
 	head() {
 		return {
 			title: 'Work',
@@ -56,7 +42,7 @@ export default {
 <style scoped>
 .work {
 	position: relative;
-	margin: 8% 0 5%;
+	margin: 3% 0 5%;
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;

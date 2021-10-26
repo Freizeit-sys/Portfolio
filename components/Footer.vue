@@ -20,9 +20,10 @@ hr {
 	justify-content: center;
 	align-items: center;
 	height: 120px;
+	padding-bottom: 5%;
 }
 .footer-wrapper {
-	width: 100%;
+	width: 360px;
 	margin: auto;
 	padding: 0 20px;
 	text-align: center;

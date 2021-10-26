@@ -2,17 +2,15 @@
 	<div role="main">
 		<section class="about">
 			<h1>About</h1>
-			<div class="container flexbox">
-
+			<div v-for="hobby in hobbys" :key="hobby.image" class="container flexbox">
 				<div class="card">
 					<div class="card-body">
 						<a href="#">
-							<img src="/figures/campnou1.jpg" alt="" loading="lazy">
+							<img :src=hobby.image alt="" loading="lazy">
 						</a>
-						<h2>Title</h2>
+						<h2 v-text="hobby.title">Title</h2>
 					</div>
 				</div>
-
 			</div>
 		</section>
 	</div>
@@ -22,6 +20,15 @@
 export default {
 	layout() {
 		return 'about'
+	},
+	data() {
+		return {
+			hobbys: [
+				{ title: 'aaa1', image: '/figures/campnou1.jpg' },
+				{ title: 'aaa2', image: '/figures/campnou1.jpg' },
+				{ title: 'aaa3', image: '/figures/campnou1.jpg' },
+			]
+		}
 	},
 	head() {
 		return {
@@ -35,7 +42,7 @@ export default {
 .about {
 	position: relative;
 	width: 80%;
-	margin: 8% 0 5%;
+	margin: 3% 0 5%;
 	margin-left: auto;
 	margin-right: auto;
 }
