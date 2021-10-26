@@ -63,15 +63,18 @@ html {
 }
 .header-wrapper {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	height: 90px;
 }
 .header-start {
-	width: 240rem;
+	width: 30%;
+}
+.header-middle {
+	width: 40%;
 }
 .header-end {
-	width: 240rem;
+	width: 30%;
 }
 .header-logo {
 	font-family: 'Bradley Hand', sans-serif;
@@ -82,6 +85,7 @@ html {
 }
 .header-nav {
 	display: flex;
+	justify-content: center;
 	list-style: none;
 	text-align: center;
 }
@@ -112,8 +116,43 @@ html {
 	transform-origin: center;
   transition: opacity 300ms, transform 300ms;
 }
-.header-nav-item a:hover::after,
-.header-nav-item a:focus::after {
+.header-nav-item a:hover::after {
 	transform: scale(1);
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+	.header {
+		height: 70px;
+	}
+	.header-wrapper {
+		height: 70px;
+	}
+	.header-logo {
+		font-size: 2.2rem;
+		padding-left: 32px
+	}
+	.header-nav-item {
+		width: 80px;
+		font-size: 1.6rem;
+	}
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+	.header {
+		height: 44px;
+	}
+	.header-wrapper {
+		height: 44px;
+	}
+	.header-logo {
+		font-size: 1.3rem;
+		padding-left: 10px
+	}
+	.header-nav-item {
+		width: 25%;
+		font-size: 1.0rem;
+	}
 }
 </style>

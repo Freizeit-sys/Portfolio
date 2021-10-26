@@ -2,6 +2,7 @@
 	<section role="main" class="container">
 		<h1>Thank You!</h1>
 		<p><Nuxt-Link to="/">Back to home.</Nuxt-Link></p>
+		<p>{{ form }}</p>
 	</section>
 </template>
 
@@ -13,6 +14,7 @@ export default {
 	head() {
 		return ''
 	},
+	
 }
 </script>
 

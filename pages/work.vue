@@ -57,6 +57,9 @@ export default {
 .work {
 	position: relative;
 	margin: 8% 0 5%;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .work h1 {
 	color: #333;
@@ -78,7 +81,7 @@ export default {
 .card {
 	position: relative;
 	width: 48%;
-	min-height: 285.7px;
+	height: auto;
 	margin-top: 3%;
 }
 .card-body {
@@ -86,7 +89,7 @@ export default {
 }
 .card-body img {
 	width: 100%;
-	max-height: auto;
+	height: auto;
 	object-fit: cover;
 	border-radius: 5px;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
@@ -102,5 +105,39 @@ export default {
 	text-align: center;
 	color: #333;
 	margin-top: 3%;
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+	.container {
+		max-width: 960px;
+	}
+	.work h1 {
+		font-size: 4.8rem;
+	}
+	.work h2 {
+		font-size: 1.2rem;
+	}
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+	.container {
+		max-width: 480px;
+	}
+	.flexbox {
+		flex-flow: wrap column;
+		align-items: center;
+	}
+	.card {
+		width: 100%;
+		margin-top: 16px;
+	}
+	.work h1 {
+		font-size: 3.2rem;
+	}
+	.work h2 {
+		font-size: 1.0rem;
+	}
 }
 </style>

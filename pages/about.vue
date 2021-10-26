@@ -3,41 +3,16 @@
 		<section class="about">
 			<h1>About</h1>
 			<div class="container flexbox">
+
 				<div class="card">
 					<div class="card-body">
-						<a href="#" class="card-imageArea">
-							<img src="/figures/home_image.jpg" alt="" loading="lazy">
+						<a href="#">
+							<img src="/figures/campnou1.jpg" alt="" loading="lazy">
 						</a>
 						<h2>Title</h2>
 					</div>
 				</div>
 
-				<div class="card">
-					<div class="card-body">
-						<a href="#" class="card-imageArea">
-							<img src="/figures/campnou.jpg" alt="" loading="lazy">
-						</a>
-						<h2>Title</h2>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="card-body">
-						<a href="#" class="card-imageArea">
-							<img src="/figures/home_image.jpg" alt="" loading="lazy">
-						</a>
-						<h2>Title</h2>
-					</div>
-				</div>
-
-				<div class="card">
-					<div class="card-body">
-						<a href="#" class="card-imageArea">
-							<img src="/figures/home_image.jpg" alt="" loading="lazy">
-						</a>
-						<h2>Title</h2>
-					</div>
-				</div>
 			</div>
 		</section>
 	</div>
@@ -59,7 +34,10 @@ export default {
 <style scoped>
 .about {
 	position: relative;
+	width: 80%;
 	margin: 8% 0 5%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .about h1 {
 	color: #333;
@@ -69,19 +47,20 @@ export default {
 	font-size: 7.0rem;
 	margin-bottom: 2%;
 }
-.flexbox {
-	display: flex;
-	flex-flow: wrap row;
-	justify-content: center;
-}
 .container {
 	max-width: 1000px;
 	margin: auto;
 }
+.flexbox {
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: center;
+	align-items: center;
+}
 .card {
 	position: relative;
-	width: 900px;
-	min-height: 350px;
+	width: 90%;
+	height: auto;
 	margin-top: 3%;
 }
 .card-body {
@@ -93,20 +72,42 @@ export default {
 	color: #333;
 	margin-top: 3%;
 }
-.card-imageArea {
-	overflow: hidden;
-	cursor: default;
-}
-.card-imageArea img {
+.card-body img {
 	width: 100%;
-	height: 350px;
+	height: auto;
 	object-fit: cover;
 	border-radius: 5px;
 	box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
 	transition: .3s;
 }
-.card-imageArea img:hover {
+.card-body img:hover {
 	transform: scale(1.05);
 	box-shadow: 0 20px 40px rgb(0 0 0 / 40%);
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+	.container {
+		max-width: 960px;
+	}
+	.card {
+		width: 100%;
+	}
+	.about h1 {
+		font-size: 4.8rem;
+	}
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+	.container {
+		max-width: 480px;
+	}
+	.about h1 {
+		font-size: 3.2rem;
+	}
+	.card-body h2 {
+		font-size: 1.2rem;
+	}
 }
 </style>

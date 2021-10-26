@@ -40,6 +40,7 @@ export default {
 	methods: {
 		submit($v) {
 			console.log($v.form.$model) // eslint-disable-line no-console
+			this.$router.push({ name: 'thankyou' })
 		}
 	},
 }
@@ -60,14 +61,16 @@ export default {
   margin-bottom: 2%;
 }
 .container {
-  max-width: 580px;
+  max-width: 1000px;
   margin: auto;
 }
 .card {
   position: relative;
-  width: 100%;
-  min-height: 285.7px;
+  width: 58%;
+	min-width: 480px;
   margin-top: 8%;
+	margin-left: auto;
+	margin-right: auto;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 20%);
@@ -77,5 +80,33 @@ export default {
   width: 70%;
   margin: auto;
   padding: 64px 0;
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+	.container {
+		max-width: 960px;
+	}
+	.contact h1 {
+		font-size: 4.8rem;
+	}
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+	.container {
+		max-width: 480px;
+	}
+	.contact h1 {
+		font-size: 3.2rem;
+	}
+	.card {
+		width: 50%;
+		min-width: 300px;
+	}
+	.card-body {
+		width: 80%;
+		padding: 24px 0;
+	}
 }
 </style>

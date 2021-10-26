@@ -1,9 +1,9 @@
 <template>
-	<main>
-		<div class="thumbnail">
+	<div role="main">
+		<div class="container">
 			<img src="/figures/home_image.jpg" loading="lazy" alt="">
 		</div>
-	</main>
+	</div>
 </template>
 
 <script>
@@ -21,14 +21,29 @@ export default {
 </script>
 
 <style scoped>
-.thumbnail {
-	margin: 50px 0;
+.container {
+	max-width: 1000px;
+	margin: 4% auto;
 	text-align: center;
 }
-.thumbnail img {
-	margin: auto;
+.container img {
+	width: 54%;
+	height: auto;
 	object-fit: cover;
-	width: 540px;
-	height: 580px;
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+	.container {
+		max-width: 960px;
+		margin: 8% auto;
+	}
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+	.container {
+		max-width: 480px;
+	}
 }
 </style>

@@ -80,7 +80,7 @@ export default {
   methods: {
     submit() {
       // 入力せず「送信」ボタンをクリックした場合、全てのエラー項目のエラーメッセージが表示
-      this.$v.touch()
+      this.$v.$touch()
       if (this.$v.invalid) {
         console.log("バリデーションエラー") // eslint-disable-line no-console
       } else {
@@ -166,5 +166,38 @@ form textarea {
 	margin-top: 10px;
 	font-size: 1.2rem;
 	color: #dc3545;
+}
+
+/* タブレット */
+@media (max-width: 959px) {
+	form label {
+		font-size: 1.3rem;
+	}
+}
+
+/* スマホ */
+@media (max-width: 480px) {
+	.form-group {
+		margin-bottom: 16px;
+	}
+	form label {
+		font-size: 1.2rem;
+	}
+	form button,
+	form input,
+	form textarea {
+		font-size: 1.2rem;
+	}
+	form textarea {
+		min-height: 100px;
+		max-height: 150px;
+	}
+	.text-danger {
+		font-size: 1.1rem;
+	}
+	.btn {
+		padding: 8px 16px;
+		font-size: 1.1rem;
+	}
 }
 </style>
